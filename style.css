@@ -1,13 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Cinco colunas de largura igual */
-    grid-template-rows: 50px 100px 200px 1fr;
-    grid-template-areas:
-      "dashboard header1 header1 header1 header1"
-      "dashboard header2 header2 header2 header2"
-      "dashboard main main main announc"
-      "dashboard main main main trending";
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Cinco colunas de largura igual */
+  grid-template-rows: 50px 100px 1fr 1fr;
+  grid-template-areas:
+    "dashboard header1 header1 header1 header1"
+    "dashboard header2 header2 header2 header2"
+    "dashboard main main main announc"
+    "dashboard main main main trending";
+  height: 100%;
+}
   
   /* Estilize as classes para adicionar bordas */
   .header1,
@@ -103,3 +111,143 @@
     margin-left: 10px; /* Adicione margem à esquerda para separar os elementos */
   }
   
+
+
+
+
+  /* header2 */
+.header2{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.header2-left{
+  display: flex;
+  align-items: center;
+}
+
+.header1-right{
+  display: flex;
+  align-items: center;
+}
+
+.header2-left-text{
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  
+}
+
+.header2-right{
+  display: flex;
+  padding: 10px;
+}
+
+.header2-right a{
+  text-decoration: none ;
+}
+
+/* Estilos para os botões em header2-right */
+.header2-right button {
+  border: 2px solid #000; /* Borda preta */
+  background-color: #fff; /* Fundo branco */
+  color: #000; /* Texto preto */
+  border-radius: 5px; /* Bordas levemente arredondadas */
+  padding: 5px 10px; /* Preenchimento interno */
+  cursor: pointer;
+  text-decoration: none; /* Remova o sublinhado no texto */
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transições suaves */
+  margin-right: 20px;
+}
+
+/* Estilizar o hover dos botões */
+.header2-right button:hover {
+  background-color: #000; /* Cor de fundo mais escura ao passar o mouse */
+  color: #fff; /* Cor do texto branca ao passar o mouse */
+  border-color: #fff; /* Borda branca ao passar o mouse */
+}
+
+/* main  blocos */
+
+.main{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(3,1fr);
+  gap: 10px;
+}
+
+
+  .main > div {
+    background-color: #ccc; /* Cor de fundo cinza claro (altere conforme necessário) */
+    border: 2px solid #333; /* Borda preta de 2px */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centralize o conteúdo */
+  }
+
+
+/*      announcement block */
+
+
+.announc{
+  display: flex;
+  flex-direction: column;
+}
+
+.announc > div{
+  border-bottom: 2px solid gray;
+}
+
+.announc > div:last-child {
+  border-bottom: none; /* Remova a linha divisória do último elemento */
+}
+
+
+/* trending */
+
+
+
+/* Estilo para a seção .trending */
+
+/* trending */
+
+.trending{
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.user1{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vh;
+  
+}
+
+.user2{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.user3{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.user4{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+.user1 i,
+.user2 i,
+.user3 i,
+.user4 i {
+  margin-right: 10px; /* Adicione margem à direita do ícone para criar espaço entre o ícone e o <p> */
+}
