@@ -1,0 +1,105 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Cinco colunas de largura igual */
+    grid-template-rows: 50px 100px 200px 1fr;
+    grid-template-areas:
+      "dashboard header1 header1 header1 header1"
+      "dashboard header2 header2 header2 header2"
+      "dashboard main main main announc"
+      "dashboard main main main trending";
+  }
+  
+  /* Estilize as classes para adicionar bordas */
+  .header1,
+  .header2,
+  .dashboard,
+  .main,
+  .announc,
+  .trending {
+    border: 2px solid #333; /* 2px de largura com cor #333 (preto) */
+    padding: 10px; /* Adicione algum preenchimento para espaçamento interno */
+    text-align: center; /* Centralize o texto dentro dos elementos */
+  }
+  
+  /* Defina as cores de fundo para que os elementos se destaquem */
+  .header1 {
+    grid-area: header1;
+    background-color: #f0f0f0; /* Cinza claro */
+  }
+  
+  .header2 {
+    grid-area: header2;
+    background-color: #e0e0e0; /* Cinza mais claro */
+  }
+  
+  .dashboard {
+    grid-area: dashboard;
+    background-color: #d0d0d0; /* Cinza ainda mais claro */
+  }
+  
+  .main {
+    grid-area: main;
+    background-color: #fff; /* Fundo branco */
+  }
+  
+  .announc {
+    grid-area: announc;
+    background-color: #f9c; /* Uma cor de destaque (por exemplo, amarelo) */
+  }
+  
+  .trending {
+    grid-area: trending;
+    background-color: #cfc; /* Outra cor de destaque (por exemplo, verde) */
+  }
+
+  /* organização do grid acima,apagar estilo dps */
+  
+  .dashboard{
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    
+    height: 100vh;
+    
+  }
+  .dashboard ul li{
+    list-style: none;
+    text-align: left;
+    
+   
+    
+  }
+  
+  .dashboard a{
+    text-decoration: none;
+    
+  }
+  
+  .header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+  }
+  
+  .header1-left {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .header1-right {
+    display: flex;
+    align-items: center;
+    max-height: 100%;
+  }
+  
+  .header1-right button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 10px; /* Adicione margem à esquerda para separar os elementos */
+  }
+  
